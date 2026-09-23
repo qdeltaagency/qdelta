@@ -40,10 +40,10 @@ function GoldenBokehSquares({ scrollRef }: { scrollRef: React.MutableRefObject<n
         <bufferAttribute attach="attributes-position" args={[positions, 3]} />
       </bufferGeometry>
       <pointsMaterial
-        size={0.16}
+        size={0.2}
         color={PURE_GOLD}
         transparent
-        opacity={0.65}
+        opacity={0.75}
         sizeAttenuation
         depthWrite={false}
         blending={THREE.AdditiveBlending}
@@ -117,10 +117,10 @@ function StarConstellation({ scrollRef }: { scrollRef: React.MutableRefObject<nu
           <bufferAttribute attach="attributes-position" args={[positions, 3]} />
         </bufferGeometry>
         <pointsMaterial
-          size={0.11}
+          size={0.13}
           color={WARM_YELLOW}
           transparent
-          opacity={0.4}
+          opacity={0.45}
           sizeAttenuation
           depthWrite={false}
           blending={THREE.AdditiveBlending}
@@ -133,10 +133,10 @@ function StarConstellation({ scrollRef }: { scrollRef: React.MutableRefObject<nu
           <bufferAttribute attach="attributes-position" args={[positions, 3]} />
         </bufferGeometry>
         <pointsMaterial
-          size={0.042}
+          size={0.055}
           color={CHAMPAGNE_WHITE}
           transparent
-          opacity={0.9}
+          opacity={0.95}
           sizeAttenuation
           depthWrite={false}
         />
@@ -172,7 +172,7 @@ function ScrollTracker({ scrollRef }: { scrollRef: React.MutableRefObject<number
 }
 
 export default function CosmicScene({
-  dpr = [1, 1.5] as [number, number],
+  dpr = [1, 2] as [number, number],
 }: {
   dpr?: [number, number]
 }) {

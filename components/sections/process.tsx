@@ -100,15 +100,60 @@ export function Process() {
       ref={containerRef}
       className="grid-bg relative z-10 w-full border-t border-white/10 text-white transition-colors duration-700"
     >
-      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-12">
-        {/* Mobile-Only Section Header */}
-        <div className="pt-16 pb-4 lg:hidden">
-          <h2 className="font-serif text-[clamp(1.75rem,3.5vw,2.5rem)] font-normal uppercase tracking-wide text-white drop-shadow-[0_2px_20px_rgba(255,255,255,0.1)]">
-            Our <span className="text-gold">Process</span>
-          </h2>
-          <p className="mt-1 text-xs text-zinc-400">
-            Precision at every stage.
-          </p>
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-12">
+        {/* Mobile-Only Section Header & Active Step Progress Bar */}
+        <div className="pt-10 pb-4 lg:hidden">
+          <div className="flex items-end justify-between">
+            <div>
+              <h2 className="font-serif text-[clamp(1.75rem,4vw,2.5rem)] font-normal uppercase tracking-wide text-white drop-shadow-[0_2px_20px_rgba(255,255,255,0.1)]">
+                Our <span className="text-gold">Process</span>
+              </h2>
+              <p className="mt-1 text-xs text-zinc-400">
+                Precision at every stage.
+              </p>
+            </div>
+            <div className="flex items-center gap-1.5 rounded-full border border-gold/30 bg-gold/10 px-3 py-1 text-[11px] font-mono text-gold">
+              <span className="h-1.5 w-1.5 rounded-full bg-gold animate-pulse" />
+              <span>Step {currentStep.number}/08</span>
+            </div>
+          </div>
+
+          {/* Interactive Mobile Step Indicator Strip */}
+          <div className="mt-4 grid grid-cols-8 gap-1.5 border-t border-white/10 pt-3">
+            {STEPS.map((s, idx) => {
+              const isPassedOrCurrent = idx <= activeStep
+              const isCurrent = idx === activeStep
+              return (
+                <button
+                  key={s.number}
+                  type="button"
+                  onClick={() => {
+                    const target = document.getElementById(`process-step-${idx}`)
+                    target?.scrollIntoView({ behavior: 'smooth' })
+                  }}
+                  aria-label={`Jump to step ${s.number}`}
+                  className="group py-1 focus:outline-none"
+                >
+                  <div
+                    className={`h-1.5 w-full rounded-full transition-all duration-300 ${
+                      isCurrent
+                        ? 'bg-gold shadow-[0_0_8px_rgba(212,175,55,0.7)]'
+                        : isPassedOrCurrent
+                        ? 'bg-white/40'
+                        : 'bg-white/15'
+                    }`}
+                  />
+                  <span
+                    className={`mt-1 block text-center font-mono text-[8px] transition-colors ${
+                      isCurrent ? 'font-bold text-gold' : 'text-zinc-500'
+                    }`}
+                  >
+                    {s.number}
+                  </span>
+                </button>
+              )
+            })}
+          </div>
         </div>
 
         {/* 50/50 Split Sticky-Scroll Grid */}
@@ -214,13 +259,16 @@ export function Process() {
                 key={step.number}
                 id={`process-step-${index}`}
                 onViewportEnter={() => setActiveStep(index)}
-                viewport={{ amount: 0.45, margin: '-10% 0px -10% 0px' }}
-                className="flex min-h-[65vh] flex-col justify-center border-b border-white/10 py-14 lg:py-20 last:border-b-0"
+                viewport={{ amount: 0.35, margin: '-10% 0px -10% 0px' }}
+                className="flex flex-col justify-center border-b border-white/10 py-8 sm:py-12 lg:min-h-[65vh] lg:py-20 last:border-b-0"
               >
                 {/* Mobile-Only Number Indicator */}
-                <div className="flex items-center justify-between lg:hidden mb-3">
-                  <span className="font-serif text-4xl font-light text-white">
+                <div className="flex items-center justify-between lg:hidden mb-2">
+                  <span className="font-serif text-3xl font-light text-white">
                     {step.number}
+                  </span>
+                  <span className="font-mono text-[10px] uppercase tracking-wider text-gold">
+                    Phase 0{index + 1}
                   </span>
                 </div>
 
@@ -230,7 +278,7 @@ export function Process() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5 }}
-                  className="font-serif text-[clamp(1.85rem,3.2vw,2.75rem)] font-normal leading-[1.1] tracking-tight text-white"
+                  className="font-serif text-[clamp(1.6rem,3.2vw,2.75rem)] font-normal leading-[1.15] tracking-tight text-white"
                 >
                   {step.title}
                 </motion.h3>
@@ -241,7 +289,7 @@ export function Process() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.1 }}
-                  className="mt-2.5 font-serif text-base italic text-gold/90 md:text-lg"
+                  className="mt-2 font-serif text-base italic text-gold/90 md:text-lg"
                 >
                   &ldquo;{step.tagline}&rdquo;
                 </motion.p>
@@ -252,7 +300,7 @@ export function Process() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.15 }}
-                  className="mt-3.5 max-w-xl text-sm leading-relaxed text-zinc-300 md:text-base"
+                  className="mt-3 max-w-xl text-sm leading-relaxed text-zinc-300 md:text-base"
                 >
                   {step.description}
                 </motion.p>
@@ -263,14 +311,14 @@ export function Process() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.2 }}
-                  className="mt-6 flex flex-wrap items-center gap-2"
+                  className="mt-5 flex flex-wrap items-center gap-1.5 sm:gap-2"
                 >
                   {step.deliverables.map((item) => (
                     <span
                       key={item}
-                      className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 text-xs font-medium text-zinc-200 shadow-sm backdrop-blur-md"
+                      className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-2.5 py-1 text-[11px] font-medium text-zinc-200 sm:px-3.5 sm:py-1.5 sm:text-xs shadow-sm backdrop-blur-md"
                     >
-                      <Check className="h-3 w-3 text-gold stroke-[2.5]" />
+                      <Check className="h-2.5 w-2.5 sm:h-3 sm:w-3 text-gold stroke-[2.5]" />
                       <span>{item}</span>
                     </span>
                   ))}

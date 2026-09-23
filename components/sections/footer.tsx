@@ -6,13 +6,13 @@ import { motion } from 'motion/react'
 
 export function Footer() {
   return (
-    <footer className="relative z-10 w-full bg-[#000000] border-t border-white/10 pt-20 pb-12 text-white">
-      <div className="mx-auto max-w-7xl px-6 lg:px-12 flex flex-col justify-between">
+    <footer className="relative z-10 w-full bg-[#000000] border-t border-white/10 pt-14 pb-10 sm:pt-20 sm:pb-12 text-white">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12 flex flex-col justify-between">
         
         {/* ============================================================
             TOP SECTION (The Grid - Tightly Grouped with Staggered Scroll Animations)
             ============================================================ */}
-        <div className="grid grid-cols-2 gap-8 sm:grid-cols-4 lg:gap-10 pb-16">
+        <div className="grid grid-cols-2 gap-6 sm:gap-8 sm:grid-cols-4 lg:gap-10 pb-12 sm:pb-16">
           {/* Column 1: Navigation */}
           <motion.div
             initial={{ opacity: 0, y: 25 }}
@@ -173,12 +173,12 @@ export function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
-          className="flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-white/15 pt-8 mt-6 text-xs sm:text-sm text-zinc-200 font-medium"
+          className="flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-white/15 pt-6 sm:pt-8 mt-4 sm:mt-6 text-xs sm:text-sm text-zinc-300 font-medium text-center sm:text-left"
         >
           <div>
             &copy; {new Date().getFullYear()} QDelta Agency. All rights reserved.
           </div>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
             <Link href="/privacy" className="transition-colors hover:text-[#E5B869] text-zinc-200">
               Privacy Policy
             </Link>

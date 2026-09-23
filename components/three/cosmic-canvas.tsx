@@ -44,12 +44,12 @@ export function CosmicCanvas() {
       <div className="pointer-events-none absolute top-[-5%] left-1/3 h-[36rem] w-[36rem] rounded-full bg-gradient-to-b from-[#FFD700]/12 via-amber-500/8 to-transparent blur-[120px]" />
 
       {/* 3. Interactive WebGL Three.js Scene */}
-      <div className="pointer-events-auto absolute inset-0 z-0 opacity-85">
+      <div className="pointer-events-none md:pointer-events-auto absolute inset-0 z-0 opacity-90">
         {reduced || prefersReduced ? <CosmicFallback /> : <CosmicScene />}
       </div>
 
       {/* 4. Bottom shadow gradient blend */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-background via-background/60 to-transparent z-10" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 sm:h-36 lg:h-48 bg-gradient-to-t from-background via-background/60 to-transparent z-10" />
     </div>
   )
 }

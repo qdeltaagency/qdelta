@@ -14,11 +14,11 @@ export default function TermsPage() {
     <>
       <SiteNav />
 
-      <main className="relative min-h-screen bg-[#000000] text-white pt-32 pb-20 sm:pt-40 sm:pb-28 overflow-hidden">
+      <main className="relative min-h-screen bg-[#000000] text-white pt-28 pb-16 sm:pt-40 sm:pb-28 overflow-hidden">
         {/* Ambient Golden Glow Gradients */}
         <div className="pointer-events-none absolute top-20 left-1/2 -translate-x-1/2 h-[35rem] w-[50rem] rounded-full bg-gradient-to-b from-gold/10 via-amber-600/5 to-transparent blur-[140px]" />
 
-        <div className="relative mx-auto max-w-4xl px-6 lg:px-8">
+        <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           {/* Back to Home Link */}
           <Link
             href="/"
@@ -49,7 +49,7 @@ export default function TermsPage() {
           <div className="mt-12 space-y-8 text-zinc-300">
             
             {/* Section 1: Services */}
-            <section className="rounded-2xl border border-white/5 bg-white/[0.02] p-6 sm:p-8 backdrop-blur-sm transition-all hover:border-white/10">
+            <section className="rounded-2xl border border-white/5 bg-white/[0.02] p-5 sm:p-8 backdrop-blur-sm transition-all hover:border-white/10">
               <div className="flex items-center gap-3 mb-3">
                 <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gold/15 font-mono text-xs font-bold text-gold">
                   01
@@ -62,7 +62,7 @@ export default function TermsPage() {
             </section>
 
             {/* Section 2: Project Scope */}
-            <section className="rounded-2xl border border-white/5 bg-white/[0.02] p-6 sm:p-8 backdrop-blur-sm transition-all hover:border-white/10">
+            <section className="rounded-2xl border border-white/5 bg-white/[0.02] p-5 sm:p-8 backdrop-blur-sm transition-all hover:border-white/10">
               <div className="flex items-center gap-3 mb-3">
                 <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gold/15 font-mono text-xs font-bold text-gold">
                   02
@@ -75,7 +75,7 @@ export default function TermsPage() {
             </section>
 
             {/* Section 3: Payment */}
-            <section className="rounded-2xl border border-white/5 bg-white/[0.02] p-6 sm:p-8 backdrop-blur-sm transition-all hover:border-white/10">
+            <section className="rounded-2xl border border-white/5 bg-white/[0.02] p-5 sm:p-8 backdrop-blur-sm transition-all hover:border-white/10">
               <div className="flex items-center gap-3 mb-4">
                 <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gold/15 font-mono text-xs font-bold text-gold">
                   03
@@ -91,7 +91,7 @@ export default function TermsPage() {
             </section>
 
             {/* Section 4: Project Timeline */}
-            <section className="rounded-2xl border border-white/5 bg-white/[0.02] p-6 sm:p-8 backdrop-blur-sm transition-all hover:border-white/10">
+            <section className="rounded-2xl border border-white/5 bg-white/[0.02] p-5 sm:p-8 backdrop-blur-sm transition-all hover:border-white/10">
               <div className="flex items-center gap-3 mb-3">
                 <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gold/15 font-mono text-xs font-bold text-gold">
                   04
@@ -104,7 +104,7 @@ export default function TermsPage() {
             </section>
 
             {/* Section 5: Client Responsibilities */}
-            <section className="rounded-2xl border border-white/5 bg-white/[0.02] p-6 sm:p-8 backdrop-blur-sm transition-all hover:border-white/10">
+            <section className="rounded-2xl border border-white/5 bg-white/[0.02] p-5 sm:p-8 backdrop-blur-sm transition-all hover:border-white/10">
               <div className="flex items-center gap-3 mb-3">
                 <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gold/15 font-mono text-xs font-bold text-gold">
                   05
@@ -117,7 +117,7 @@ export default function TermsPage() {
             </section>
 
             {/* Section 6: Revisions and Changes */}
-            <section className="rounded-2xl border border-white/5 bg-white/[0.02] p-6 sm:p-8 backdrop-blur-sm transition-all hover:border-white/10">
+            <section className="rounded-2xl border border-white/5 bg-white/[0.02] p-5 sm:p-8 backdrop-blur-sm transition-all hover:border-white/10">
               <div className="flex items-center gap-3 mb-3">
                 <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gold/15 font-mono text-xs font-bold text-gold">
                   06
@@ -130,7 +130,7 @@ export default function TermsPage() {
             </section>
 
             {/* Section 7: Ownership and Usage */}
-            <section className="rounded-2xl border border-white/5 bg-white/[0.02] p-6 sm:p-8 backdrop-blur-sm transition-all hover:border-white/10">
+            <section className="rounded-2xl border border-white/5 bg-white/[0.02] p-5 sm:p-8 backdrop-blur-sm transition-all hover:border-white/10">
               <div className="flex items-center gap-3 mb-3">
                 <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gold/15 font-mono text-xs font-bold text-gold">
                   07
@@ -143,7 +143,7 @@ export default function TermsPage() {
             </section>
 
             {/* Section 8: Confidentiality */}
-            <section className="rounded-2xl border border-white/5 bg-white/[0.02] p-6 sm:p-8 backdrop-blur-sm transition-all hover:border-white/10">
+            <section className="rounded-2xl border border-white/5 bg-white/[0.02] p-5 sm:p-8 backdrop-blur-sm transition-all hover:border-white/10">
               <div className="flex items-center gap-3 mb-3">
                 <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gold/15 font-mono text-xs font-bold text-gold">
                   08
@@ -156,7 +156,7 @@ export default function TermsPage() {
             </section>
 
             {/* Section 9: Cancellation */}
-            <section className="rounded-2xl border border-white/5 bg-white/[0.02] p-6 sm:p-8 backdrop-blur-sm transition-all hover:border-white/10">
+            <section className="rounded-2xl border border-white/5 bg-white/[0.02] p-5 sm:p-8 backdrop-blur-sm transition-all hover:border-white/10">
               <div className="flex items-center gap-3 mb-3">
                 <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gold/15 font-mono text-xs font-bold text-gold">
                   09
@@ -169,7 +169,7 @@ export default function TermsPage() {
             </section>
 
             {/* Section 10: Delays */}
-            <section className="rounded-2xl border border-white/5 bg-white/[0.02] p-6 sm:p-8 backdrop-blur-sm transition-all hover:border-white/10">
+            <section className="rounded-2xl border border-white/5 bg-white/[0.02] p-5 sm:p-8 backdrop-blur-sm transition-all hover:border-white/10">
               <div className="flex items-center gap-3 mb-3">
                 <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gold/15 font-mono text-xs font-bold text-gold">
                   10
@@ -182,7 +182,7 @@ export default function TermsPage() {
             </section>
 
             {/* Section 11: Communication and Approval */}
-            <section className="rounded-2xl border border-white/5 bg-white/[0.02] p-6 sm:p-8 backdrop-blur-sm transition-all hover:border-white/10">
+            <section className="rounded-2xl border border-white/5 bg-white/[0.02] p-5 sm:p-8 backdrop-blur-sm transition-all hover:border-white/10">
               <div className="flex items-center gap-3 mb-3">
                 <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gold/15 font-mono text-xs font-bold text-gold">
                   11
@@ -195,7 +195,7 @@ export default function TermsPage() {
             </section>
 
             {/* Section 12: Agreement */}
-            <section className="rounded-2xl border border-white/5 bg-white/[0.02] p-6 sm:p-8 backdrop-blur-sm transition-all hover:border-white/10">
+            <section className="rounded-2xl border border-white/5 bg-white/[0.02] p-5 sm:p-8 backdrop-blur-sm transition-all hover:border-white/10">
               <div className="flex items-center gap-3 mb-3">
                 <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gold/15 font-mono text-xs font-bold text-gold">
                   12

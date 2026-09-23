@@ -32,11 +32,11 @@ const SERVICES = [
 
 export function Services() {
   return (
-    <section id="services" className="relative z-10 border-t border-white/10 bg-cosmos-400/50 py-28 md:py-36">
+    <section id="services" className="relative z-10 border-t border-white/10 bg-cosmos-400/50 py-12 sm:py-18 md:py-24 lg:py-32">
       {/* Ambient background soft glow */}
       <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[35rem] w-[55rem] rounded-full bg-gradient-to-b from-gold/10 via-amber-500/5 to-transparent blur-[140px]" />
 
-      <div className="relative mx-auto max-w-6xl px-6">
+      <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
         {/* Section Header with Scroll Animation */}
         <motion.div
           initial={{ opacity: 0, y: 35 }}
@@ -50,7 +50,7 @@ export function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="font-serif text-[clamp(2.5rem,5.5vw,4.25rem)] font-normal uppercase tracking-wide text-white drop-shadow-[0_2px_20px_rgba(255,255,255,0.1)]"
+            className="font-serif text-[clamp(2rem,5.5vw,4.25rem)] font-normal uppercase tracking-wide text-white drop-shadow-[0_2px_20px_rgba(255,255,255,0.1)]"
           >
             Our Services
           </motion.h2>
@@ -60,7 +60,7 @@ export function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="mt-5 max-w-2xl text-sm leading-relaxed text-zinc-300 md:text-base"
+            className="mt-4 sm:mt-5 max-w-2xl text-sm leading-relaxed text-zinc-300 md:text-base px-2 sm:px-0"
           >
             We merge luxury aesthetics, cutting-edge engineering, and intelligent AI solutions to create digital experiences that drive active growth.
           </motion.p>
@@ -70,14 +70,14 @@ export function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="mt-2 max-w-xl text-xs leading-relaxed text-zinc-400 md:text-sm"
+            className="mt-2 max-w-xl text-xs leading-relaxed text-zinc-400 md:text-sm px-2 sm:px-0"
           >
             We are defined by uncompromising high-impact craft and bespoke digital experiences.
           </motion.p>
         </motion.div>
 
         {/* 3x2 Grid with Staggered Scroll Reveal & Hover Elevate */}
-        <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 sm:mt-12 grid grid-cols-1 gap-5 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((service, i) => (
             <motion.div
               key={service.title}
@@ -93,7 +93,7 @@ export function Services() {
                 y: -8,
                 transition: { duration: 0.25, ease: 'easeOut' },
               }}
-              className="group relative flex flex-col justify-between rounded-2xl border border-gold/30 bg-[#0c0c12]/85 p-7 backdrop-blur-xl transition-colors duration-300 hover:border-gold/70 hover:bg-[#101018]/95 hover:shadow-[0_12px_40px_rgba(212,175,55,0.22)]"
+              className="group relative flex flex-col justify-between rounded-2xl border border-gold/30 bg-[#0c0c12]/85 p-6 sm:p-7 backdrop-blur-xl transition-colors duration-300 hover:border-gold/70 hover:bg-[#101018]/95 hover:shadow-[0_12px_40px_rgba(212,175,55,0.22)]"
             >
               <div>
                 {/* Top Row: Number & Icon */}

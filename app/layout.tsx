@@ -52,6 +52,8 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
   colorScheme: 'dark',
   themeColor: '#040406',
 }
@@ -65,9 +67,27 @@ export default function RootLayout({
     <html
       lang="en"
       data-scroll-behavior="smooth"
-      className={`dark bg-background ${playfair.variable} ${inter.variable} ${jetbrainsMono.variable}`}
+      className={`dark bg-[#040406] text-[#f4f4f5] ${playfair.variable} ${inter.variable} ${jetbrainsMono.variable}`}
+      style={{ backgroundColor: '#040406', color: '#f4f4f5', colorScheme: 'dark' }}
     >
-      <body className="font-sans antialiased bg-background text-foreground selection:bg-gold selection:text-black">
+      <head>
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+              :root, html, body {
+                background-color: #040406 !important;
+                background: #040406 !important;
+                color: #f4f4f5 !important;
+                color-scheme: dark !important;
+              }
+            `,
+          }}
+        />
+      </head>
+      <body
+        className="font-sans antialiased bg-[#040406] text-foreground selection:bg-gold selection:text-black"
+        style={{ backgroundColor: '#040406', color: '#f4f4f5' }}
+      >
         <ReserveModalProvider>
           {children}
         </ReserveModalProvider>

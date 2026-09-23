@@ -10,7 +10,7 @@ export default function Page() {
   return (
     <>
       <SiteNav />
-      <main className="relative min-h-screen">
+      <main className="relative min-h-screen overflow-x-clip bg-[#040406]">
         <Hero />
         <Services />
         <Process />

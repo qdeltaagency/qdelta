@@ -25,10 +25,10 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="relative z-10 w-full bg-[#000000] border-t border-white/10 py-24 text-white sm:py-32 lg:py-40"
+      className="relative z-10 w-full bg-[#000000] border-t border-white/10 py-12 sm:py-18 md:py-24 lg:py-32 text-white"
     >
-      <div className="mx-auto max-w-7xl px-6 lg:px-12">
-        <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-16 items-stretch">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-16 items-stretch">
           
           {/* ============================================================
               LEFT SIDE (The Hook)
@@ -47,7 +47,7 @@ export function Contact() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-                className="font-serif text-[clamp(4.5rem,10vw,8.5rem)] font-normal leading-[0.88] tracking-tight text-white select-none"
+                className="font-serif text-[clamp(2.75rem,8vw,7.5rem)] font-normal leading-[0.92] tracking-tight text-white select-none"
               >
                 Let&apos;s <br />
                 Talk.
@@ -59,7 +59,7 @@ export function Contact() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7, delay: 0.2 }}
-                className="mt-8 max-w-md text-lg text-neutral-400 font-light leading-relaxed md:text-xl"
+                className="mt-5 sm:mt-6 max-w-md text-base sm:text-lg text-neutral-400 font-light leading-relaxed md:text-xl"
               >
                 Have an ambitious idea? Let&apos;s engineer it.
               </motion.p>
@@ -71,7 +71,7 @@ export function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.3 }}
-              className="grid grid-cols-2 gap-6 pt-16 mt-16 border-t border-neutral-900 lg:pt-20 lg:mt-auto"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 pt-6 sm:pt-8 mt-6 sm:mt-10 border-t border-neutral-900 lg:pt-16 lg:mt-auto"
             >
               <div className="space-y-2">
                 <div className="flex items-center gap-2.5">
@@ -113,7 +113,7 @@ export function Contact() {
             transition={{ duration: 0.85, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-6 flex items-center"
           >
-            <div className="w-full rounded-[2.5rem] border border-white/10 bg-neutral-900/50 p-8 shadow-[0_20px_60px_rgba(0,0,0,0.8)] backdrop-blur-2xl sm:p-12 md:p-14">
+            <div className="w-full rounded-2xl sm:rounded-[2.5rem] border border-white/10 bg-neutral-900/50 p-5 sm:p-10 md:p-14 shadow-[0_20px_60px_rgba(0,0,0,0.8)] backdrop-blur-2xl">
               <AnimatePresence mode="wait">
                 {submitted ? (
                   <motion.div
@@ -148,8 +148,8 @@ export function Contact() {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                   >
-                    <div className="mb-8">
-                      <h3 className="font-serif text-2xl font-normal tracking-tight text-white sm:text-3xl">
+                    <div className="mb-6 sm:mb-8">
+                      <h3 className="font-serif text-xl sm:text-2xl md:text-3xl font-normal tracking-tight text-white">
                         Have a project in mind?
                       </h3>
                       <p className="mt-1 text-xs text-neutral-400">
@@ -157,7 +157,7 @@ export function Contact() {
                       </p>
                     </div>
 
-                    <form onSubmit={handleSubmit} className="space-y-5">
+                    <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
                       {/* Name Field */}
                       <div>
                         <label
@@ -173,7 +173,7 @@ export function Contact() {
                           placeholder="Your full name"
                           value={name}
                           onChange={(e) => setName(e.target.value)}
-                          className="w-full rounded-xl border border-white/10 bg-white/5 px-5 py-4 text-sm font-medium text-white placeholder:text-neutral-500 outline-none transition-all duration-300 focus:border-[#E5B869] focus:bg-white/10 focus:ring-1 focus:ring-[#E5B869] focus:shadow-[0_0_20px_rgba(229,184,105,0.15)]"
+                          className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 sm:px-5 sm:py-3.5 text-sm font-medium text-white placeholder:text-neutral-500 outline-none transition-all duration-300 focus:border-[#E5B869] focus:bg-white/10 focus:ring-1 focus:ring-[#E5B869] focus:shadow-[0_0_20px_rgba(229,184,105,0.15)]"
                         />
                       </div>
 
@@ -192,7 +192,7 @@ export function Contact() {
                           placeholder="your@email.com"
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
-                          className="w-full rounded-xl border border-white/10 bg-white/5 px-5 py-4 text-sm font-medium text-white placeholder:text-neutral-500 outline-none transition-all duration-300 focus:border-[#E5B869] focus:bg-white/10 focus:ring-1 focus:ring-[#E5B869] focus:shadow-[0_0_20px_rgba(229,184,105,0.15)]"
+                          className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 sm:px-5 sm:py-3.5 text-sm font-medium text-white placeholder:text-neutral-500 outline-none transition-all duration-300 focus:border-[#E5B869] focus:bg-white/10 focus:ring-1 focus:ring-[#E5B869] focus:shadow-[0_0_20px_rgba(229,184,105,0.15)]"
                         />
                       </div>
 
@@ -207,11 +207,11 @@ export function Contact() {
                         <textarea
                           id="asym-details"
                           required
-                          rows={4}
+                          rows={3}
                           placeholder="Tell us about your project goals, scope, and timeline..."
                           value={details}
                           onChange={(e) => setDetails(e.target.value)}
-                          className="w-full resize-none rounded-xl border border-white/10 bg-white/5 px-5 py-4 text-sm font-medium text-white placeholder:text-neutral-500 outline-none transition-all duration-300 focus:border-[#E5B869] focus:bg-white/10 focus:ring-1 focus:ring-[#E5B869] focus:shadow-[0_0_20px_rgba(229,184,105,0.15)]"
+                          className="w-full resize-none rounded-xl border border-white/10 bg-white/5 px-4 py-3 sm:px-5 sm:py-3.5 text-sm font-medium text-white placeholder:text-neutral-500 outline-none transition-all duration-300 focus:border-[#E5B869] focus:bg-white/10 focus:ring-1 focus:ring-[#E5B869] focus:shadow-[0_0_20px_rgba(229,184,105,0.15)]"
                         />
                       </div>
 
@@ -219,7 +219,7 @@ export function Contact() {
                       <div className="pt-2">
                         <button
                           type="submit"
-                          className="group flex w-full items-center justify-center gap-2 rounded-full bg-white py-4.5 text-sm font-semibold tracking-wide text-black transition-all duration-300 hover:bg-[#E5B869] hover:text-black hover:shadow-[0_0_35px_rgba(229,184,105,0.45)] cursor-pointer"
+                          className="group flex w-full items-center justify-center gap-2 rounded-full bg-white py-3.5 sm:py-4 text-sm font-semibold tracking-wide text-black transition-all duration-300 hover:bg-[#E5B869] hover:text-black hover:shadow-[0_0_35px_rgba(229,184,105,0.45)] cursor-pointer"
                         >
                           <span>Submit Inquiry</span>
                           <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

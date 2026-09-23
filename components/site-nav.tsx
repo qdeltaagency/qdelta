@@ -36,7 +36,7 @@ export function SiteNav() {
         initial={{ y: -60, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-        className="fixed inset-x-0 top-0 z-40 flex items-center justify-between px-6 py-5 md:px-12"
+        className="fixed inset-x-0 top-0 z-40 flex items-center justify-between px-4 py-3.5 sm:px-6 sm:py-5 md:px-12"
       >
         {/* Brand Logo */}
         <a href="/#home" className="group flex items-center gap-2 focus:outline-none">
@@ -93,7 +93,7 @@ export function SiteNav() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-30 flex flex-col bg-cosmos-500/95 px-8 pt-28 pb-10 backdrop-blur-2xl md:hidden"
+            className="fixed inset-0 z-30 flex flex-col bg-cosmos-500/98 px-6 pt-24 pb-8 backdrop-blur-2xl md:hidden overflow-y-auto"
           >
             <nav className="flex flex-col gap-4">
               {LINKS.map((link, i) => (
