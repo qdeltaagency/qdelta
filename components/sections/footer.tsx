@@ -177,6 +177,8 @@ export function Footer() {
         >
           <div>
             &copy; {new Date().getFullYear()} QDelta Agency. All rights reserved.
+            <span className="mx-1 text-zinc-500">&bull;</span>
+            <span className="text-zinc-200">Mohammed Qaisuddin</span>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
             <Link href="/privacy" className="transition-colors hover:text-[#E5B869] text-zinc-200">
