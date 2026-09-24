@@ -84,26 +84,7 @@ export function Hero() {
           </a>
         </motion.div>
 
-        {/* 5. Micro Value Proposition Tags */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.7, duration: 0.8 }}
-          className="mt-6 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[11px] font-mono text-zinc-400"
-        >
-          <span className="flex items-center gap-1.5">
-            <span className="h-1 w-1 rounded-full bg-gold" />
-            Next.js 16 &amp; React 19
-          </span>
-          <span className="flex items-center gap-1.5">
-            <span className="h-1 w-1 rounded-full bg-gold" />
-            &lt; 24h Response
-          </span>
-          <span className="flex items-center gap-1.5">
-            <span className="h-1 w-1 rounded-full bg-gold" />
-            Locked Milestones
-          </span>
-        </motion.div>
+
       </div>
 
       {/* Bottom Infinite Capabilities Marquee Ticker */}
